@@ -20,8 +20,7 @@
 }
 
 /* Global Elements */
-img,
-svg {
+img, svg {
   max-width: 100%;
   display: block;
 }
@@ -37,21 +36,25 @@ input[type="number"] {
   width: 100%;
   padding: 0.25rem 0.5rem;
   font-weight: 700;
-  border: 1px solid var(--slate-300);
+  border: none;
   outline: none;
   background-color: var(--white);
-  border-radius: 0.5rem;
-  transition: border-color 0.3s ease;
+  
 }
-input[type="number"]:focus {
-  border-color: var(--lime);
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+
+
 
 /* Radio Buttons */
 input[type="radio"] {
   appearance: none;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 0.5rem;
+  height: 0.5rem;
   margin-right: 0.5rem;
   outline: 2px solid var(--slate-900);
   outline-offset: 3px;
@@ -71,12 +74,10 @@ input[type="radio"]:checked {
   align-items: center;
   gap: 0.5rem;
   border: 1px solid var(--slate-300);
-  border-radius: 0.5rem;
 }
 .radio-inputs > * {
   cursor: pointer;
 }
-
 .radio-inputs:hover {
   border: 1px solid var(--lime);
 }
@@ -105,14 +106,12 @@ button {
   color: var(--slate-700);
   padding: 0.5rem 0.75rem;
   font-weight: 700;
-  border-radius: 0.5rem;
 }
 
 /* Form Input Container */
 .form-flex {
   display: flex;
   border: 1px solid var(--slate-300);
-  border-radius: 0.5rem;
 }
 .form-flex:hover {
   border: 1px solid var(--slate-900);
@@ -164,10 +163,6 @@ body {
   display: grid;
   place-content: center;
   justify-content: center;
-}
-.form-alert {
-  color: var(--red);
-  display: none;
 }
 
 /* Mortgage Calculator Layout */
